@@ -1,0 +1,37 @@
+{
+  "name": "openlist-tsworkers",
+  "main": "src/backend/worker.ts",
+  "compatibility_date": "2026-08-04",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/",
+      "/index.html"
+    ]
+  },
+  "vars": {
+    "ENVIRONMENT": "production",
+    "DB_FORMAT": "map",
+    "DB_DRIVER": "auto",
+    "DB_CIPHER": "none",
+    "CACHE_ENABLED": "true",
+    "CACHE_DRIVER": "db",
+    "CACHE_FILE_TREE": "true",
+    "CACHE_DOWNLOAD_LINK": "false",
+    "CACHE_TTL": "0",
+    "CACHE_LINK_TTL": "5",
+    "CACHE_EXCLUDE_DRIVERS": "virtual,alias,url_tree,strm,chunk",
+    "SINGLEFLIGHT": "auto"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "KV"
+    }
+  ]
+}
